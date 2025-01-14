@@ -1,0 +1,10 @@
+{
+  "name": "name",
+  "description": "description",
+  "authors": "author",
+  "version": "1.0.0",
+  "main": "pathToMain",
+  "dependencies": {
+    "faucet": "source .env && forge script script/DMONFaucetScript.s.sol:DMONFaucetScript --rpc-url ${MONAD_DEVNET_RPC_URL} --legacy --broadcast"
+  }
+}
