@@ -29,7 +29,7 @@ contract Faucet {
     function requestDMON(address recipient) external {
         require(recipient != address(0), "Invalid address");
         require(address(this).balance >= dripAmount, "Contract funds depleted");
-        require(block.timestamp >= lastRequestTime[msg.sender] + cooldownPeriod, "Cooldown period not passed");
+        require(block.timestamp >= lastRequestTime[msg.sender] + cooldownPeriod, "Cooldown period has not passed");
 
         lastRequestTime[msg.sender] = block.timestamp;
 
